@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-
+    Scanner sc = new Scanner(System.in);
     //Desarrollar un sistema de notas para un estudiante que desea saber su nota final (de cada materia)
     //EL sistema debe pedir el nombre del estudiante, el documento y el programa al que esta matriculado
     //Menu de opciones: Desarrollo de Software, diseño grafica y gastronomia
@@ -20,8 +20,35 @@ public class Main {
    //El sistema debe discriminar la informacion general del estudiante
         //Nombre, documento y nota de la materia
 
-
-
+        System.out.println("Ingrese el nombre del estudiante");
+        String nombreEstudiante = sc.nextLine();
+        System.out.println("Ingrese el documento del estudiante");
+        String documentoEstudiante = sc.nextLine();
+        System.out.println("Escriba el numero correspondiente al programa matriculado: \n1.Desarrollo de software \n2.Diseño grafico \n3.Gastronomia \n-------------");
+        String programa = sc.nextLine();
+        switch (programa){
+            case "1":
+                System.out.println("Programa desarrollo de software \n \nEscriba el numero correspondiente a la materia \n1.Logica de programacion \n2.Metodologias agiles \n3.Introduccion a la programacion \n-----------");
+                String materia = sc.nextLine();
+                switch (materia){
+                    case "1":
+                        System.out.println("Nota de logica de programacion");
+                        break;
+                    case "2":
+                        System.out.println("Nota de metodologias agiles");
+                        break;
+                    case "3":
+                        System.out.println("Nota de Introduccion a la programacion");
+                        break;
+                }
+                break;
+            case "2":
+                System.out.println("Programa Diseño Grafico");
+                break;
+            case "3":
+                System.out.println("Programa Gastronomia");
+                break;
+        }
 
 
 
